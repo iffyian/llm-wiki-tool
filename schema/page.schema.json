@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WikiPage",
+  "description": "LLM Wiki의 topic page 메타데이터 스키마",
+  "type": "object",
+  "required": ["title", "summary", "key_points", "source_basis"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "page 제목 (파일명의 slug와 일치)"
+    },
+    "summary": {
+      "type": "string",
+      "description": "핵심 내용을 2-3문장으로 설명"
+    },
+    "key_points": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "주요 사실 목록"
+    },
+    "related_pages": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "관련 wiki page 경로 목록"
+    },
+    "source_basis": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "이 page의 근거가 된 raw source 파일명"
+    },
+    "maintenance_notes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "갱신이 필요하거나 불확실한 부분"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "마지막 갱신 날짜 (YYYY-MM-DD)"
+    }
+  },
+  "additionalProperties": false
+}

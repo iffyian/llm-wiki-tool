@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "llm-wiki": {
+      "command": "python3",
+      "args": ["tools/wiki_mcp_server.py"],
+      "description": "LLM Wiki MCP 서버 — wiki page 읽기/쓰기, 검색, 로그 기록"
+    }
+  }
+}

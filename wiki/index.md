@@ -1,15 +1,6 @@
-# Agentic Coding Basics Wiki
+Welcome to the internal engineering documentation. This wiki contains system design specs, API architectures, and deployment pipelines.
 
-Agentic Coding Basics raw source에서 생성된 topic pages입니다.
-
-## Pages
-
-- [Agentic Coding](pages/agentic-coding.md)
-- [Agent Workflow](pages/agent-workflow.md)
-- [Harness, MCP, Automation](pages/harness-mcp-automation.md)
-
-## Operations
-
-- [Scheme 운영 방안](../SCHEME.md)
-- [Raw Source Pipeline](../PIPELINE.md)
-- [Maintenance Log](maintenance-log.md)
+## 📁 Core Engineering Documents
+- [RESTful API Design Guidelines](pages/agent-workflow.md)
+- [Database Schema and Scaling Strategy](pages/agentic-coding.md)
+- [CI/CD Automation Pipeline](pages/harness-mcp-automation.md)

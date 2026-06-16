@@ -1,28 +1,21 @@
-# Agent Workflow
+# RESTful API Design Guidelines
 
 ## Summary
-
-Agent workflow는 user request를 분석하고 task로 분해한 뒤, plan과 review를 통해 결과를 검증하는 절차입니다.
+This document defines the standard protocol and design patterns for building internal and external RESTful APIs within our software ecosystem.
 
 ## Key Points
-
-- Plan mode는 구현 전에 분석과 계획을 수행하는 단계입니다.
-- Sequential agent는 앞 agent의 결과를 다음 agent가 이어받습니다.
-- Parallel agent는 독립적인 task를 동시에 처리할 수 있습니다.
-- Agent specification은 agent의 역할, 입력, 출력, 책임을 명시합니다.
-- Agent pool과 orchestrator는 여러 agent의 상태와 routing을 관리합니다.
+- All endpoints must use plural nouns (e.g., `/v1/users`, `/v1/products`).
+- JSON is enforced as the standard payload format for both requests and responses.
+- HTTP status codes must accurately reflect outcomes (200 OK, 201 Created, 400 Bad Request, 500 Internal Server Error).
+- Rate limiting is applied at the API Gateway level to protect infrastructure.
 
 ## Related Pages
-
-- [Agentic Coding](agentic-coding.md)
-- [Harness, MCP, Automation](harness-mcp-automation.md)
+- [Database Schema and Scaling Strategy](agentic-coding.md)
+- [CI/CD Automation Pipeline](harness-mcp-automation.md)
 
 ## Source Basis
-
-- `4. Plan_mode Sequential and Parallel agents.pdf`
-- `5. Agent Specifications.pdf`
-- `6. Agent pool and Orchestrator.pdf`
+- `Official Production API Design Manual v2.4`
+- `RFC 7231 Hypertext Transfer Protocol Standards`
 
 ## Maintenance Notes
-
-- 실제 agent 역할 예시를 추가할 수 있습니다.
+- Next update will include OAuth2 authentication flow charts.
